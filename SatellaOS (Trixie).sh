@@ -55,10 +55,12 @@ sudo apt install --no-install-recommends -y \
 # Lightdm Config
 echo "Lightdm Yapılandırması..."
 
+sudo mkdir -p /etc/lightdm/lightdm.conf.d/
 sudo bash -c 'cat > /etc/lightdm/lightdm.conf.d/10-slick.conf << "EOF"
 [Seat:*]
 greeter-session=slick-greeter
 EOF'
+
 
 
 # İnternet Tarayıcısı
