@@ -61,7 +61,11 @@ sudo bash -c 'cat > /etc/lightdm/lightdm.conf.d/10-slick.conf << "EOF"
 greeter-session=slick-greeter
 EOF'
 
+# unrar (nonfree)
 
+echo "unrar (nonfree) Kuruluyor..."
+
+wget -qO /tmp/unrar.deb http://ftp.debian.org/debian/pool/non-free/u/unrar-nonfree/unrar_7.2.2-1_amd64.deb && sudo apt install -y /tmp/unrar.deb
 
 # İnternet Tarayıcısı
 echo "İnternet Tarayıcısı Kuruluyor..."
