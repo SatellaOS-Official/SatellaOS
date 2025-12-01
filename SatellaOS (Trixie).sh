@@ -5,6 +5,7 @@ echo "XFCE ve temel paketler kuruluyor..."
 sudo apt update
 
 sudo apt install --no-install-recommends -y \
+  xfce4 \
   xfce4-appfinder \
   xfce4-battery-plugin \
   xfce4-clipman \
@@ -38,7 +39,8 @@ sudo apt install --no-install-recommends -y \
   network-manager \
   network-manager-gnome \
   ntfs-3g \
-  pulseaudio \
+  pipewire \
+  pipewire-pulse \
   pavucontrol \
   alsa-utils \
   galculator \
@@ -49,6 +51,15 @@ sudo apt install --no-install-recommends -y \
   jmtpfs \
   xfwm4 \
   xfdesktop4
+
+# Lightdm Config
+echo "Lightdm Yapılandırması..."
+
+sudo bash -c 'cat > /etc/lightdm/lightdm.conf.d/10-slick.conf << "EOF"
+[Seat:*]
+greeter-session=slick-greeter
+EOF'
+
 
 # İnternet Tarayıcısı
 echo "İnternet Tarayıcısı Kuruluyor..."
