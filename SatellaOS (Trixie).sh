@@ -65,7 +65,7 @@ EOF'
 
 # İnternet Tarayıcısı
 echo "İnternet Tarayıcısı Kuruluyor..."
-sudo apt install --no-install-recommends -y firefox-esr
+curl -fsS https://dl.brave.com/install.sh | sh
 
 # Xfce Özelleştirme
 echo "Xfce Özelleştirme Kuruluyor..."
