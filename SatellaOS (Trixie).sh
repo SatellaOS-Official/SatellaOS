@@ -40,8 +40,7 @@ sudo apt install --no-install-recommends -y \
   network-manager \
   network-manager-gnome \
   ntfs-3g \
-  pipewire \
-  pipewire-pulse \
+  pulseaudio \
   pavucontrol \
   alsa-utils \
   galculator \
@@ -62,12 +61,9 @@ sudo bash -c 'cat > /etc/lightdm/lightdm.conf.d/10-slick.conf << "EOF"
 greeter-session=slick-greeter
 EOF'
 
-# unrar (nonfree)
-
-echo "unrar (nonfree) Kuruluyor..."
-
-wget -qO /tmp/unrar_7.2.2-1_amd64.deb http://ftp.debian.org/debian/pool/non-free/u/unrar-nonfree/unrar_7.2.2-1_amd64.deb && sudo apt install -y /tmp/unrar_7.2.2-1_amd64.deb
-
+# Unrar
+echo "Arşiv Yöneticisi Kuruluyor..."
+sudo apt install unrar
 
 # İnternet Tarayıcısı
 echo "İnternet Tarayıcısı Kuruluyor..."
@@ -75,9 +71,7 @@ curl -fsS https://dl.brave.com/install.sh | sh
 
 # Xfce Özelleştirme
 echo "Xfce Özelleştirme Kuruluyor..."
-sudo apt install --no-install-recommends -y \
-  menulibre \
-  yad
+sudo apt install --no-install-recommends -y menulibre
 
 # Asya Ülkeleri Fontları
 echo "Asya Ülkeleri Fontları Kuruluyor..."
@@ -95,7 +89,7 @@ sudo apt install --no-install-recommends -y \
 # Politika yöneticileri
 echo "Politika yöneticileri kuruluyor..."
 sudo apt install --no-install-recommends -y \
-  ukui-polkit \
+  mate-polkit \
   polkitd \
   pkexec
 
