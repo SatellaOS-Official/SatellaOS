@@ -25,6 +25,7 @@ sudo apt install --no-install-recommends -y \
   xfce4-terminal \
   xfce4-whiskermenu-plugin \
   xfce4-screensaver \
+  xfce4-notifyd \
   vlc \
   grub-customizer \
   qbittorrent \
