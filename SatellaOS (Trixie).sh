@@ -74,22 +74,23 @@ curl -fsS https://dl.brave.com/install.sh | sh
 echo "Xfce Özelleştirme Kuruluyor..."
 sudo apt install --no-install-recommends -y menulibre
 
-# Asya Ülkeleri Fontları
-echo "Asya Ülkeleri Fontları Kuruluyor..."
 sudo apt install -y \
+  fonts-noto \
+  fonts-noto-extra \
+  fonts-noto-cjk \
+  fonts-noto-color-emoji \
+  fonts-symbola \
+  fonts-unifont \
+  fonts-dejavu \
+  fonts-liberation \
   fonts-nanum \
   fonts-unfonts-core \
   fonts-ipafont-mincho \
   fonts-ipafont-gothic \
   fonts-takao \
-  fonts-noto-cjk \
   fonts-wqy-zenhei \
   fonts-arphic-ukai \
   fonts-arphic-uming \
-  fonts-noto-color-emoji \
-  fonts-noto \
-  fonts-noto-extra \
-  fonts-symbola \
   fonts-bebas-neue \
   fonts-montserrat
 
